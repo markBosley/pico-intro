@@ -1,5 +1,16 @@
-# pico-intro
-Introduction to Rapberry Pi Pico
+from machine import Pin,PWM
+import utime
+
+MID = 1500000
+MIN = 1000000
+MAX = 2000000
+
+pwm = PWM(Pin(16))
+
+
+
+##pwm.freq(50)
+pwm.duty_u16(9000)
 
 pwm.freq(50)
 pwm.duty_ns(MID)
@@ -11,3 +22,6 @@ while True:
     utime.sleep(1)
     pwm.duty_ns(MAX)
     utime.sleep(1)
+
+
+
